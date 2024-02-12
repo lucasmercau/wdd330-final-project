@@ -28,10 +28,87 @@ header {
 }
 
 @keyframes rightThenLeft {
-    0%   {left: -10%;}
+    0%   {left: 10%;}
     20% {}
     40% {}
+    50% {left: 60%;}
     60% {}
     80% {}
-    100% {left: 65%;}
+    100% {left: 10%;}
+}
+
+
+.product-card {
+    flex: 1 1 45%;
+    margin: 0.25em;
+    padding: 0.5em;
+    border: 3px solid black;
+    border-radius: 20px;
+    max-width: 250px;
+    transition: transform 0.6s ease;
+}
+
+.product-card a {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: scale(0.9);
+}
+
+.product-card h2,
+.product-card h3,
+.product-card p {
+    margin: 0.5em 0;
+}
+  
+.card__brand {
+    font-size: var(--small-font);
+}
+  
+.card__name {
+    font-size: 1em;
+}
+.books {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    list-style-type: none;
+    padding: 0;
+}
+.books a {
+    text-decoration: none;
+    color: var(--dark-grey);
+}
+
+ul li {
+    border: 1px solid black;
+}
+
+li img {
+    min-width: 128px;
+}
+
+.free {
+    background-color: rgb(57, 231, 57);
+    color: white;
+}
+
+.not_for_sale {
+    background-color: rgb(255, 39, 39);
+    color: white;
+}
+
+.for_sale {
+    background-color: rgb(201, 201, 38);
+    color: white;
+}
+
+.free, .not_for_sale, .for_sale {
+    padding: 5px 10px;
+    border-radius: 8px;
 }
