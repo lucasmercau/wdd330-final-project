@@ -1,7 +1,7 @@
 function productCardTemplate(product) {
     const empty = "";
     const zero = "0.00";
-    const bookExample = "../images/book-example.jpg";
+    const bookExample = "./images/book-example.jpg";
     return `<li class="product-card">
       <a href="${product.volumeInfo.canonicalVolumeLink}">
         <img src="${product.volumeInfo.imageLinks.smallThumbnail || bookExample}" alt="Image of ${product.volumeInfo.title}">
@@ -27,7 +27,7 @@ export default class CardTemplate {
     renderList(list) { // Stretch Activity Step 1
       const newList = list.map(item => {
         if(item.volumeInfo.imageLinks == undefined) {
-        item.volumeInfo.imageLinks = `"smallThumbnail":"../images/book-example.jpg"`;}
+        item.volumeInfo.imageLinks = `"smallThumbnail":"./images/book-example.jpg"`;}
             });
       const htmlStrings = list.map(productCardTemplate);
     
