@@ -16,6 +16,5 @@ export async function getBooksData(finder) {
   }
     const response = await fetch(`https://www.googleapis.com/books/v1/volumes?q=${finder}&key=AIzaSyAu1aRXhxNC9Ui9gqSI8NrpxNlCC-92sfg`);
     const data = await convertToJson(response);
-    console.log(data.items);
     return data.items;
 }

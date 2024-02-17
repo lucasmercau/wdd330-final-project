@@ -1,5 +1,6 @@
 import { getBooksData } from "./booksapi.mjs";
-import ProductList from "./cardTemplate.mjs";
+import CardTemplate from "./CardTemplate.mjs";
+
 
 document.getElementById("titleInput").addEventListener("input", processInput);
 const books = document.querySelector(".books");
@@ -14,8 +15,9 @@ function processInput() {
 async function myFunction(inputValue) {
 
     const list = await getBooksData(inputValue);
-    const listBooks = new ProductList(list, books);
-    console.log("Input value:", inputValue);
+    const listBooks = new CardTemplate(list, books);
+    // console.log("Input value:", inputValue);
     listBooks.init();
 }
+
 
