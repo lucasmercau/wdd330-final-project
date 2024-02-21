@@ -1,4 +1,4 @@
-import { getBooksData } from "./booksApi.mjs";
+import { getBooksData } from "./BooksApi.mjs";
 import CardTemplate from "./CardTemplate.mjs";
 
 
