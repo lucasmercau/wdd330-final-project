@@ -1,4 +1,4 @@
-function displayVisits() {
+export function displayVisits() {
     const visitsDisplay = document.querySelector(".visits");
 
     let numVisits = Number(localStorage.getItem("numVisits-key")) || 0;
@@ -14,7 +14,7 @@ function displayVisits() {
     localStorage.setItem("numVisits-key", numVisits);
 }
 
-displayVisits();
+
 
 
 const visitsDisplay = document.querySelector(".lastVisit");

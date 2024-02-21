@@ -1,6 +1,4 @@
-const quoteUrl = "https://type.fit/api/quotes";
-
-async function quoteApiFetch(quoteUrl) {
+export async function quoteApiFetch(quoteUrl) {
     try {
         fetch(quoteUrl)
         .then(function(response) {
@@ -14,8 +12,6 @@ async function quoteApiFetch(quoteUrl) {
     }
 }
 
-
-quoteApiFetch(quoteUrl);
 
 function getRandomQuote(quoteData) {
     // Generate a random index within the range of the array length

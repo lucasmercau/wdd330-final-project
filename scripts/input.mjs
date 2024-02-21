@@ -1,11 +1,11 @@
-import { getBooksData } from "./booksapi.mjs";
+import { getBooksData } from "./booksApi.mjs";
 import CardTemplate from "./CardTemplate.mjs";
 
 
 document.getElementById("titleInput").addEventListener("input", processInput);
 const books = document.querySelector(".books");
 
-function processInput() {
+export function processInput() {
     // Get the input value
     let inputValue = document.getElementById("titleInput").value;
     // Call a function with the input value

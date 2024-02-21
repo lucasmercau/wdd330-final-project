@@ -6,7 +6,7 @@ const captionDesc = document.querySelector('#caption');
 //
 const url = "https://api.openweathermap.org/data/2.5/weather?lat=43.81&lon=-111.78&units=imperial&appid=38b07c8612ea622b365c841f50a776a2";
 
-async function apiFetch() {
+export async function apiFetch() {
     try {
         const response = await fetch(url);
         if (response.ok) {
@@ -26,7 +26,7 @@ function toTitleCase(str) {
     });
 }
 
-apiFetch();
+
 // <p class="center weather"><img id="weather-icon"></img><span id="current-temp"></span> - <span id="caption"></span>.</p>
 function displayResults(data) {
     currentTemp.innerHTML = `${data.main.temp}&deg;F`;

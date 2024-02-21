@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 330 | Book Finder | Final Project</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <script src="./scripts/input.js" type="module" defer></script>
-    <script src="./scripts/visits.js" defer></script>
-    <script src="./scripts/weather.js" defer></script>
-    <script src="./scripts/quotes.js" defer></script>
+    <script src="./scripts/main.js" type="module" defer></script>
 </head>
 <body>
     <header>
@@ -18,17 +15,23 @@
         <div class="section-grid">
             <section>
                 <h3>BYU - Idaho Weather</h3>
-                <p class="center weather"><img id="weather-icon" src="#" alt="weather png"><span id="current-temp"></span><span>&nbsp;-&nbsp;</span><span id="caption"></span></p>
+                <img id="weather-icon" src="#" alt="weather png">
+                <p class="center weather"><span id="current-temp"></span><span>&nbsp;-&nbsp;</span><span id="caption"></span></p>
                 <p class="quote"></p>
                 <p class="author"></p>
-                <p class="center marg-top"><strong>Page Visits:</strong> <span class="visits"></span></p>
+                
             </section>
             <section>
                 <h3>Welcome to BookFinder!</h3>
                 <p class="lastVisit"></p>
+                <p class="visitsBlur"><strong>Page Visits:</strong> <span class="visits"></span></p>
+                <p>Click count: <span id="clickCountDisplay"></span></p>
             </section>
         </div>
-        <input type="text" id="titleInput" placeholder="Title, Author, etc">
+        <div class="container">
+            <input type="text" id="titleInput" placeholder="Title, Author, etc">
+        </div>
+        
         <ul class="books"></ul>
     </main>
     <footer>©2024 | WDD 330 | Book Finder | Final Project</footer>
